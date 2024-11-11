@@ -3,9 +3,42 @@ img {
     border: 5px solid slategray;
     border-radius: 5px;
     cursor: crosshair;
+    ;
 }
 body {
     text-align: center;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    background: #a6dce8;
+    background: #83afb980;
+}
+h1 {
+    display: inline-block;
+    margin: 20px 0;
+    text-align: center;
+    position:relative;
+    
+}
+h1::after{
+    content: '';
+    background: linear-gradient(to right, red, orange);
+    border-radius: 100px;
+    height: 4px;
+    width: 100%;
+    position:absolute;
+    bottom: -5px;
+    left: 0;
+    transition: 100ms;
+}
+h1:hover::after{
+    width: 0;
+}
+p {
+    color: rgb(227, 61, 24);
+    font-weight: 900;
+    font-size: large;
+}
+
+.caption {
+    display: block;
+    font-weight: bolder;
+    font-size: larger;
 }
