@@ -1,28 +1,38 @@
-
-
+.item{
+    width: 200px;
+    height: 200px;
+    position: relative;
+}
 img {
     width: 200px;
     border: 5px solid slategray;
     border-radius: 100px;
     cursor: crosshair;
-    ;
-}
-
-video {
-    width: 200px;
-    border-radius: 100px;
+    z-index: 1;
+    opacity: 1;
     position: absolute;
-    top: 0;
-    bottom: 0;
-    display: none;
+    transition: opacity 0.3s ease;
 }
 
-img:hover{
-    display: none;
+.cowpic {
+    width: 100%;
+    height: 100%;
+    border: 5px solid slategray;
+    border-radius: 100px;
+    cursor: crosshair;
+    opacity: 0;
+    position: absolute;
+    transition: opacity 0.3s ease;
+    z-index: 2;
+
 }
 
-video:hover{
-    display: block;
+.item:hover img{
+    opacity: 0;
+}
+
+.item:hover .cowpic{
+    opacity: 1;
 }
 
 body {
@@ -61,5 +71,33 @@ p {
     display: block;
     font-weight: bolder;
     font-size: larger;
+    text-align: center;
 }
 
+.topnav {
+    background-color: red;
+    overflow: hidden;
+    border-radius: 100px;
+  }
+  
+  /* Style the links inside the navigation bar */
+  .topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  /* Change the color of links on hover */
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  /* Add a color to the active/current link */
+  .topnav a.active {
+    background-color: rgb(255, 85, 0);
+     color: white;
+  }
