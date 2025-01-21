@@ -1,8 +1,3 @@
-.item{
-    width: 200px;
-    height: 200px;
-    position: relative;
-}
 img {
     width: 200px;
     border: 5px solid slategray;
@@ -10,30 +5,20 @@ img {
     cursor: crosshair;
     z-index: 1;
     opacity: 1;
-    position: absolute;
-    transition: opacity 0.3s ease;
+    display: block; /* Make the image a block element */
+    margin: 0 auto; /* Center horizontally */
+    transition: filter 0.3s ease; /* Smooth transition for the filter */
 }
 
-.cowpic {
-    width: 100%;
-    height: 100%;
-    border: 5px solid slategray;
-    border-radius: 100px;
-    cursor: crosshair;
-    opacity: 0;
-    position: absolute;
-    transition: opacity 0.3s ease;
-    z-index: 2;
-
+/* Invert colors on hover */
+img:hover {
+    filter: invert(100%);
+}
+.caption {
+    text-align: center; /* Center-align the caption */
+    margin-top: 10px; /* Add some space between the image and caption */
 }
 
-.item:hover img{
-    opacity: 0;
-}
-
-.item:hover .cowpic{
-    opacity: 1;
-}
 
 body {
     text-align: center;
